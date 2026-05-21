@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Doctor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="header-logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2V22M2 12H22M6 6L18 18M6 18L18 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+                        <path d="M19 12H15V8H9V12H5V18H19V12Z" fill="white"/>
+                        <path d="M12 4V8M12 16V20M8 12H4M20 12H16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="header-text">
+                    <h1>Virtual Doctor</h1>
+                    <span class="status"><span class="dot"></span>Online</span>
+                </div>
+            </div>
+            <button class="close-btn">×</button>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-body" id="chat-body">
+            <!-- Messages will be injected here -->
+            <div class="message bot-message slide-in">
+                <div class="avatar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z" fill="#008080" opacity="0.2"/>
+                        <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="#008080"/>
+                    </svg>
+                </div>
+                <div class="bubble">
+                    Hello! I'm your Virtual Doctor. I'm here to listen to your symptoms and provide advice. How are you feeling today?
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="chat-footer">
+            <form id="chat-form">
+                <input type="text" id="user-input" placeholder="Type your question..." autocomplete="off">
+                <button type="submit" id="send-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
